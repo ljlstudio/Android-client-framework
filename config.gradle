@@ -1,0 +1,54 @@
+//def supportVersion              = "26.1.0"
+def recyclerViewVersion = "1.2.0-alpha01"
+def aspectjrtVersion = "1.8.13"
+def okhttp3Version = "3.10.0"
+def retrofitVersion = "2.4.0"
+def rxjava = "3.0.0"
+def rxandroid = "2.1.0"
+def rxlifecycle = "2.2.2"
+def rxbinding = "2.1.1"
+def rxpermissions = "0.10.2";
+def lifecycle_extensions = "2.0.0"
+def logging_interceptor = "3.6.0"
+def recycler_adapter = "3.0.0"
+def smartRefreshLayout = "1.1.0-alpha-5"
+def gpuimage = "2.0.4"
+
+project.ext {
+
+    //dattex
+    dattex = [
+            applicationId: "com.ljl.databinding.mvp",
+            versionCode  : 1,
+            versionName  : "1.0.0"
+    ]
+    android = [
+            compileSdkVersion: 28,
+            minSdkVersion    : 14,
+            targetSdkVersion : 28,
+    ]
+
+    dependencies = [
+            "recyclerview"          : "androidx.recyclerview:recyclerview:${recyclerViewVersion}",
+            "aspectjrt"             : "org.aspectj:aspectjrt:${aspectjrtVersion}",
+            "okhttp3"               : "com.squareup.okhttp3:okhttp:${okhttp3Version}",
+            "retrofit"              : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            "converter-gson"        : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            "adapter-rxjava2"       : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+
+            "rxjava"                : "io.reactivex.rxjava3:rxjava:${rxjava}",
+            "rxandroid"             : "io.reactivex.rxjava2:rxandroid:${rxandroid}",
+            //rx系列与View生命周期同步
+            "rxlifecycle"           : "com.trello.rxlifecycle2:rxlifecycle:${rxlifecycle}",
+            "rxlifecycle-components": "com.trello.rxlifecycle2:rxlifecycle-components:${rxlifecycle}",
+            //rxbinding
+            "rxbinding"             : "com.jakewharton.rxbinding2:rxbinding:${rxbinding}",
+            //rx 6.0权限请求
+            "rxpermissions"         : "com.github.tbruyelle:rxpermissions:${rxpermissions}",
+            "lifecycle-extensions"  : "androidx.lifecycle:lifecycle-extensions:${lifecycle_extensions}",
+            "logging-interceptor"   : "com.squareup.okhttp3:logging-interceptor:${logging_interceptor}",
+            "adapter_helper"        : "com.github.CymChad:BaseRecyclerViewAdapterHelper:${recycler_adapter}",
+            "smartRefreshLayout"    : "com.scwang.smartrefresh:SmartRefreshLayout:${smartRefreshLayout}",
+            "gpuimage"              : "jp.co.cyberagent.android:gpuimage:${gpuimage}",
+    ]
+}

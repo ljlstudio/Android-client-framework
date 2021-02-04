@@ -1,0 +1,6 @@
+include ':myapplication'
+include ':mvp_clean'
+include ':mvvmlib'
+include ':mvplib'
+
+rootProject.name = "MvpFrameWork"
